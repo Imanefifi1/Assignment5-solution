@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+</head>
+<body>
+    <h1>Menu</h1>
+    <div id="menuItems">
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var menuItems = document.getElementById('menuItems');
+            setTimeout(function() {
+                menuItems.innerHTML = '<ul><li>Appetizer</li><li>Main Course</li><li>Dessert</li></ul>';
+            }, 1000); 
+        });
+    </script>
+</body>
+</html>

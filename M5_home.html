@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Web App</title>
+  
+</head>
+<body style="background-color:palevioletred;">
+    <div id="container">
+        <div id="menuTile">
+            <a href="menu.html">Menu</a>
+        </div>
+        <div id="specialsTile">
+            <a href="#" onclick="loadRandomCategory();">Specials</a>
+        </div>
+        <div id="mapTile">
+            <a href="map.html">Map</a>
+        </div>
+    </div>
+
+    <script>
+        function loadRandomCategory() {
+            var categories = ['Lunch', 'Dinner', 'Sushi', 'Drinks']; 
+            var randomIndex = Math.floor(Math.random() * categories.length);
+            var randomCategoryShortName = categories[randomIndex];
+            localStorage.setItem('randomCategory', randomCategoryShortName);
+            window.location.href = "specials.html";
+        }
+    </script>
+</body>
+</html>
